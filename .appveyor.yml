@@ -6,10 +6,7 @@ nuget:
   project_feed: true
   
 install:  
-  - git submodule update --init --recursive
-  
-nuget:
-  account_feed: true 
+  - git submodule update --init --recursive 
   
 before_build:
 - cmd: nuget restore -PackagesDirectory ./packages
