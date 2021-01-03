@@ -1,10 +1,10 @@
 find_path(OPENSSL_INCLUDE_DIR NAMES openssl/ssl.h PATH_SUFFIXES include)
 
-find_library(OPENSSL_CRYPTO_RELEASE_LIBRARY NAMES libcrypto-1_1.lib)
-find_library(OPENSSL_CRYPTO_DEBUG_LIBRARY NAMES libcrypto-1_1d.lib)
+find_library(OPENSSL_CRYPTO_RELEASE_LIBRARY NAMES libcrypto-1_1.lib libcrypto-1_1-x64.lib)
+find_library(OPENSSL_CRYPTO_DEBUG_LIBRARY NAMES libcrypto-1_1d.lib libcrypto-1_1-x64d.lib)
 
-find_library(OPENSSL_SSL_RELEASE_LIBRARY NAMES libssl-1_1.lib)
-find_library(OPENSSL_SSL_DEBUG_LIBRARY NAMES libssl-1_1d.lib)
+find_library(OPENSSL_SSL_RELEASE_LIBRARY NAMES libssl-1_1.lib libssl-1_1-x64.lib)
+find_library(OPENSSL_SSL_DEBUG_LIBRARY NAMES libssl-1_1d.lib libssl-1_1-x64d.lib)
 
 set(OPENSSL_CRYPTO_LIBRARY optimized ${OPENSSL_CRYPTO_RELEASE_LIBRARY} debug ${OPENSSL_CRYPTO_DEBUG_LIBRARY})
 set(OPENSSL_SSL_LIBRARY optimized ${OPENSSL_SSL_RELEASE_LIBRARY} debug ${OPENSSL_SSL_DEBUG_LIBRARY})
