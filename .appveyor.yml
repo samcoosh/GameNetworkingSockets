@@ -2,7 +2,7 @@ image:
   - Visual Studio 2019
   
 install:  
-  - git submodule update --init --recursive 
+  - git submodule update --init --recursive --depth 1
   
 before_build:
 - cmd: nuget sources add -name appveyor -source https://ci.appveyor.com/nuget/krzysztofmajor-ilnu72arcjgl -username %nuget_user% -password %nuget_password%
