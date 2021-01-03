@@ -11,23 +11,13 @@
   </ItemDefinitionGroup>
 
   <!-- static libraries -->
-  <ItemDefinitionGroup Condition="'$(Platform)' == 'Win32' And ('$(PlatformToolset)' == 'v142') And '$(Configuration)' == 'Release'">
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'Win32' And ('$(PlatformToolset)' == 'v142')">
     <Link>
       <AdditionalDependencies>Win32\GameNetworkingSockets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Platform)' == 'Win32' And ('$(PlatformToolset)' == 'v142') And '$(Configuration)' == 'Debug'">
-    <Link>
-      <AdditionalDependencies>Win32\GameNetworkingSockets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-  
-  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64' And ('$(PlatformToolset)' == 'v142') And '$(Configuration)' == 'Release'">
-    <Link>
-      <AdditionalDependencies>x64\GameNetworkingSockets.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>  
-  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64' And ('$(PlatformToolset)' == 'v142') And '$(Configuration)' == 'Debug'">
+  
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64' And ('$(PlatformToolset)' == 'v142')">
     <Link>
       <AdditionalDependencies>x64\GameNetworkingSockets.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
