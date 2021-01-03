@@ -3,6 +3,7 @@
   <!-- general -->
   <ItemDefinitionGroup>
     <ClCompile>
+	  <PreprocessorDefinitions>STEAMNETWORKINGSOCKETS_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
