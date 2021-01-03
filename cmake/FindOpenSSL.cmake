@@ -120,10 +120,11 @@ if(OPENSSL_USE_STATIC_LIBS)
   endif()
 endif()
 
+
 set(_OPENSSL_ROOT_HINTS
 	${OPENSSL_ROOT_DIR}
 	ENV OPENSSL_ROOT_DIR
-)
+	)
 
 set(_OPENSSL_ROOT_HINTS_AND_PATHS
     HINTS ${_OPENSSL_ROOT_HINTS}
@@ -297,7 +298,7 @@ if(WIN32 AND NOT CYGWIN)
     set(SSL_EAY_LIBRARY_DEBUG "${SSL_EAY_DEBUG}")
     set(SSL_EAY_LIBRARY_RELEASE "${SSL_EAY_RELEASE}")
 
-    include(SelectLibraryConfigurations.cmake)
+    include(${CMAKE_CURRENT_LIST_DIR}/SelectLibraryConfigurations.cmake)
     select_library_configurations(LIB_EAY)
     select_library_configurations(SSL_EAY)
 
